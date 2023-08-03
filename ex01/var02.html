@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 객체(Object)
+        let user = {
+            id: 1,
+            username: "ssar",
+            password: "1234"
+        };
+        console.log("id", user.id);
+        console.log("username", user.username);
+        console.log("password", user.password);
+        console.log(user);
+        
+        // 복잡한 Object
+        // Object에 Object를 넣을 수 있다
+        let board = {
+            id:1,
+            title:"제목1",
+            content:"내용1",
+            user:user
+        };
+        console.log(board);
+
+        // JSON으로 컨버팅
+        // 자바스크립트 오브젝트를 JSON으로 변경한다
+        let data = JSON.stringify(board);
+        console.log(data);
+
+        // 반대로 해보기
+        // JSON을 자바스크립트 오브젝트로 파싱해서 넣어준다
+        let data2 = JSON.parse(data);
+        console.log(data2);
+    </script>
+</body>
+</html>
