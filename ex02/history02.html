@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>history 02</h1>
+    <button onclick="back()">뒤로가기</button>
+
+    <script>
+        function back(){
+            // window 객체는 생략이 가능하다 
+            // window.location.href = "/ex02/history01.html";
+
+            // history 객체는 이전에 불러왔던 화면을 그대로 불러오는 것
+            // 뒤로가기
+            history.back();
+        }
+    </script>
+</body>
+</html>

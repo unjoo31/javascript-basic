@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red-text{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>box1</div>
+    <div>box1</div>
+    <div class="red-text">box1</div>
+    <div class="red-text">box1</div>
+    <div id="box5">box1</div>
+    <hr />
+    <button onclick="tagChange()">태그찾기</button>
+    <button onclick="classChange()">클래스찾기</button>
+    <button onclick="idChange()">아이디찾기</button>
+</body>
+    <script>
+        function tagChange(){
+            let tagEl = document.querySelectorAll("div");
+            tagEl[0].innerHTML = "<h1>내용변경</h1>";
+            tagEl[1].textContent = "<h1>내용변경</h1>";
+            tagEl[2].textContent = "내용변경";
+            tagEl[3].textContent = "내용변경";
+            tagEl[4].textContent = "내용변경";
+        }
+        function classChange(){
+            let classEl = document.querySelectorAll(".red-text");
+            classEl[0].textContent = "내용변경";
+            classEl[1].textContent = "내용변경";
+        }
+        function idChange(){
+            let idEl = document.querySelector("#box5");
+            idEl.innerHTML = "<h2>내용변경</h2>";
+        }
+    </script>
+</html>
