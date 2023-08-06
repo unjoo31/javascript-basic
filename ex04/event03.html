@@ -22,12 +22,17 @@
     </div>
     <script>
         function addAppend(){
+            // 새로운 div 요소 생성
             let newEl = document.createElement("div");
+            // 새로운 div 요소에 class 속성과 값 설정
             newEl.setAttribute("class", "box");
             newEl.setAttribute("id", "innerBox1");
+            // 새로운 div 요소의 내용 설정 (inner HTML)
             newEl.innerHTML = "내부박스1";
 
+            // outerBox 요소를 선택하여 변수 el에 할당
             let el = document.querySelector("#outerBox");
+            // 지정된 요소의 마지막 자식으로 새로운 요소를 추가합니다
             el.append(newEl);
         }
         function addPrepend(){
