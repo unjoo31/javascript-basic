@@ -16,14 +16,26 @@
     <hr />
     <button onclick="hide1()">display로 숨기기</button>
     <button onclick="hide2()">visible로 숨기기</button>
+    <button onclick="hide3()">display</button>
+    <button onclick="hide4()">visible</button>
     <div class="box">
         <!-- id는 중복될 수 없다 -->
         <div id="b1" class="box">내부박스1</div>
         <div id="b2" class="box">내부박스2</div>
+        <div id="b3" class="box">내부박스3</div>
+        <div id="b4" class="box">내부박스4</div>
     </div>
 
     <!-- script는 body의 끝에 작성하기 -->
     <script>
+        function hide3(){
+            let e3 = document.querySelector("#b3");
+            e3.style.display = "none";
+        }
+        function hide4(){
+            let e4 = document.querySelector("#b4");
+            e4.style.visibility = "hidden";
+        }
         function hide1(){
             // document : 자바스크립트가 body에 접근하게 해주는 라이브러리
             // 이렇게 하면 css 속성에 접근해서 제어할 수 있다
