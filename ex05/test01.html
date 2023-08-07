@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // setTimeout() : 특정 시간 뒤에 실행된다
+        // 이렇게 하면 5초뒤에 실행1, 5초뒤에 실행2, 5초뒤에 실행3이 실행된다
+        setTimeout(() => {
+            console.log("실행1");
+            setTimeout(() => {
+                console.log("실행2");
+                setTimeout(() => {
+                    console.log("실행3");
+                }, 5000);
+            }, 5000);
+        }, 5000); 
+    </script>
+</body>
+</html>

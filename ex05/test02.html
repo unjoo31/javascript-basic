@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 자바스크립트가 만들어준 객체 사용하기
+        let promise = new Promise((success, fail) => {
+            setTimeout(() => {
+                console.log("실행1");
+                // success()를 호출해주면 다음 then으로 넘어간다
+                // fail()를 호출해주면 다음 then으로 넘어가지 않는다
+                success(); 
+            }, 5000);
+        }).then(()=>{
+            setTimeout(() => {
+                console.log("실행2");              
+            }, 5000);
+        }).catch(()=>{
+            console.log("오류");
+        });
+    </script>
+</body>
+</html>
